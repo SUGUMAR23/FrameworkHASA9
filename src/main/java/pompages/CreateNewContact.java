@@ -1,5 +1,6 @@
 package pompages;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -21,7 +22,7 @@ public class CreateNewContact {
 				
 				//Enter the URL
 				driver.get("http://localhost:8888/index.php?action=Login&module=Users");
-				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 				
 				//Enter User Name and Password
 				driver.findElement(By.name("user_name")).sendKeys("admin");

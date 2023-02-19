@@ -22,7 +22,7 @@ public class CreateNewLead {
 		
 		//Enter the URL
 		driver.get("http://localhost:8888/index.php?action=Login&module=Users");
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
 		//Enter User Name and Password
 		driver.findElement(By.name("user_name")).sendKeys("admin");
